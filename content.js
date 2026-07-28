@@ -6,6 +6,9 @@ sirRat.id = "sir-rattimus";
 document.body.appendChild(sirRat);//child?, make it visible
 
 const followDistance = 200;
+let walkDirection = 1;
+const walkSpeed = 1;
+
 //sirRat positions
 let sirRatX = window.innerWidth - 70;
 let sirRatY = window.innerHeight - 70;
@@ -31,12 +34,27 @@ function animate(){
 
     if (distance < followDistance) {
 
-        sirRatX += (cursorX - sirRatX) * 0.05;
+    // follow cursor
+    sirRatX += (cursorX - sirRatX) * 0.05;
+}
+    else {
 
-    }
+    // wander around
+    sirRatX += walkDirection * walkSpeed;
+
+}
+
 
 
     sirRatY = window.innerHeight - 100;
+
+    if (sirRatX > window.innerWidth - 70) {
+    walkDirection = -1;
+}
+    
+    if (sirRatX < 0) {
+    walkDirection = 1;
+}
 
 
     sirRat.style.transform =
