@@ -1,7 +1,6 @@
 // create a new HTML element
 const sirRat = document.createElement("img");
 sirRat.id = "sir-rattimus";
-sirRat.src = sprites.stand;
 // add to webpage
 document.body.appendChild(sirRat);//child?, make it visible
 
@@ -11,7 +10,7 @@ const sprites = {
     walkl: chrome.runtime.getURL("downleft-removebg-preview.png"),
     walkr: chrome.runtime.getURL("downright-removebg-preview.png")
 }
-
+sirRat.src = sprites.stand;
 let state= "stand";
 const followDistance = 200;
 let walkDirection = 1;
