@@ -3,17 +3,17 @@
     width: 70px;
     height: 70px;
 
-    background-color:gray;
+    image-rendering: pixelated;
+    pointer-events: none;
+    position: fixed;
+    z-index: 999999;
 
-    position:fixed;
+    background-color:gray;
 
     left: 0;
     top: 0;
 
-
-    z-index: 999999;
-
-    border-radius: 10px;
+    border-radius: 5px;
 
     pointer-events:none;
 }

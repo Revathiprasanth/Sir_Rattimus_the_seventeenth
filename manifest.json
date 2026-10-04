@@ -3,6 +3,25 @@
     "name": "Sir Rattimus the Seventeenth",
     "version": "1.0",
     "description":"The legend Sir Rattimus the Seventeenth watch over your mortal being.",
+    "icons": {
+        "16": "cheeseicon1.png",
+        "32": "cheeseicon1.png",
+        "48": "cheeseicon1.png",
+        "128": "cheeseicon1.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "cheeseicon1.png",
+            "32": "cheeseicon1.png",
+            "48": "cheeseicon1.png",
+            "128": "cheeseicon1.png"
+        }
+    },
+    "permissions": [
+        "storage"
+    ],
+
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
